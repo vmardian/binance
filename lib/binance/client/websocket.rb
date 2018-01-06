@@ -9,7 +9,7 @@ module Binance
       BASE_URL = 'wss://stream.binance.com:9443'.freeze
 
       # Create a user data stream
-      def user(key:, methods:)
+      def user_data(key:, methods:)
         create_stream("#{BASE_URL}/ws/#{key}", methods: methods)
       end
 
