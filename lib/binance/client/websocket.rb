@@ -8,6 +8,13 @@ module Binance
       # Public: String base url for WebSocket client to use
       BASE_URL = 'wss://stream.binance.com:9443'.freeze
 
+      # Create a user data stream
+      def user(key:, methods:)
+        create_stream("#{BASE_URL}/ws/#{key}", methods: methods)
+      end
+
+      
+      
       # Public: Create a single WebSocket stream
       #
       # :stream - The Hash used to define the stream
